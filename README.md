@@ -4,7 +4,7 @@
 Designed and deployed a secure WireGuard VPN on a Proxmox server to enable encrypted remote access to a home lab environment. The solution supports multiple clients and allows secure connectivity to internal virtual machines, including a Kali Linux system.
 
 This project simulates real-world enterprise remote access scenarios and demonstrates hands-on experience in networking, security, and troubleshooting.
-
+This setup enables secure remote access to internal services without exposing them directly to the internet, reducing attack surface and improving network security.
 ---
 
 ## 🧠 Objectives
@@ -141,6 +141,7 @@ tcpdump -i vmbr0 udp port 51820
 ---
 
 ## 📸 Screenshots
+These screenshots validate successful VPN deployment, internal network access, and traffic monitoring.
 
 ### 🔐 VPN Handshake
 <img width="364" height="88" alt="handshake" src="https://github.com/user-attachments/assets/5300f48d-5066-4df8-abb8-230d203ca53a" />
