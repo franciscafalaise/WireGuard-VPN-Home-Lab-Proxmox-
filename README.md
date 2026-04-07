@@ -1,13 +1,13 @@
 # 🔐 WireGuard VPN Home Lab (Proxmox)
 
-## 📌 Overview
+## Overview
 Designed and deployed a secure WireGuard VPN on a Proxmox server to enable encrypted remote access to a home lab environment. The solution supports multiple clients and allows secure connectivity to internal virtual machines, including a Kali Linux system.
 
 This project simulates real-world enterprise remote access scenarios and demonstrates hands-on experience in networking, security, and troubleshooting.
 
 ---
 
-## 🧠 Objectives
+## Objectives
 - Build a secure remote access solution
 - Implement key-based VPN authentication
 - Enable access to internal network resources
@@ -16,7 +16,7 @@ This project simulates real-world enterprise remote access scenarios and demonst
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 Client Devices (Mac, iPhone)
         │
@@ -35,7 +35,7 @@ Internal Network (192.168.1.0/24)
 This architecture ensures that external clients securely access internal resources without exposing services directly to the public internet.
 ---
 
-## ⚙️ Technologies Used
+## Technologies Used
 - WireGuard VPN
 - Proxmox VE
 - Kali Linux
@@ -45,13 +45,13 @@ This architecture ensures that external clients securely access internal resourc
 
 ---
 
-## 🔑 Key Features
-- 🔐 Secure VPN using public/private key cryptography
-- 👥 Multi-client support (Mac + iPhone)
-- 🌐 Access to internal network (192.168.1.0/24)
-- 🖥️ Remote SSH access to Kali VM
-- 📊 Bandwidth monitoring with vnStat
-- 🧪 Packet analysis with tcpdump
+## Key Features
+-  Secure VPN using public/private key cryptography
+-  Multi-client support (Mac + iPhone)
+-  Access to internal network (192.168.1.0/24)
+-  Remote SSH access to Kali VM
+-  Bandwidth monitoring with vnStat
+-  Packet analysis with tcpdump
 
 ---
 
@@ -97,7 +97,7 @@ tcpdump -i vmbr0 udp port 51820
 ❌ Issue: SSH Permission Denied
 Cause: Incorrect credentials
 Fix: Verified user and reset password
-📊 Monitoring & Logging
+ Monitoring & Logging
 🔹 Live Tunnel Status
 wg
 🔹 Bandwidth Monitoring
@@ -108,17 +108,17 @@ tcpdump -i vmbr0 udp port 51820
 
 ## 📸 Screenshots
 
-### 🔐 VPN Handshake
+### VPN Handshake
 <img width="364" height="88" alt="handshake" src="https://github.com/user-attachments/assets/5300f48d-5066-4df8-abb8-230d203ca53a" />
 
-### 🐉 SSH into Kali VM
+### SSH into Kali VM
 <img width="601" height="386" alt="kali-ssh" src="https://github.com/user-attachments/assets/ada6aa17-bbd7-41ec-a7e1-ebda9dec2c7a" />
 
-### 📡 Internal Network Connectivity
+### Internal Network Connectivity
 
 <img width="601" height="386" alt="ping Kali internal network connectivity" src="https://github.com/user-attachments/assets/1af0c809-c27b-483d-92f5-d74e5e0b4d91" />
 
-### 📊 Traffic Monitoring (vnStat)
+### Traffic Monitoring (vnStat)
 <img width="1263" height="851" alt="vnstat" src="https://github.com/user-attachments/assets/26323566-7aeb-4411-81e3-3723e01decd8" />
 
 ## Impact
