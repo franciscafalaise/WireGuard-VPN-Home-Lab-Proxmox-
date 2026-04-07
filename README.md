@@ -84,19 +84,24 @@ ssh francisca@192.168.1.161
 Troubleshooting (Real-World Debugging)
 This project involved extensive troubleshooting to resolve real-world networking issues, including handshake failures, key mismatches, and routing problems.
 
-❌ Issue: No handshake
+Issue: No handshake
 Cause: Key mismatch
 Fix: Regenerated and properly mapped keys
-❌ Issue: VPN connects but no access
+
+Issue: VPN connects but no access
 Cause: Missing NAT or routing
 Fix: Added MASQUERADE rule
-❌ Issue: Connection failure
+
+Issue: Connection failure
 Cause: Port forwarding misconfiguration
 Fix: Verified using tcpdump:
 tcpdump -i vmbr0 udp port 51820
-❌ Issue: SSH Permission Denied
+
+Issue: SSH Permission Denied
 Cause: Incorrect credentials
 Fix: Verified user and reset password
+
+
  Monitoring & Logging
 🔹 Live Tunnel Status
 wg
