@@ -55,7 +55,7 @@ This architecture ensures that external clients securely access internal resourc
 
 ---
 
-## 🛠️ Setup Summary
+## Setup Summary
 
 ### 1. WireGuard Server Configuration (Proxmox)
 - Installed WireGuard
@@ -121,13 +121,10 @@ tcpdump -i vmbr0 udp port 51820
 ### 📊 Traffic Monitoring (vnStat)
 <img width="1263" height="851" alt="vnstat" src="https://github.com/user-attachments/assets/26323566-7aeb-4411-81e3-3723e01decd8" />
 
-
-
-
-## 🎯 Impact
+## Impact
 This project demonstrates the ability to design, deploy, and troubleshoot secure network infrastructure in a real-world lab environment.
 
-🚀 Future Improvements
+Future Improvements
 Add firewall rules for segmentation
 Integrate with SIEM (Elastic Stack)
 Implement key rotation policy
