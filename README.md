@@ -64,18 +64,38 @@ This architecture ensures that external clients securely access internal resourc
 - Configured NAT:
 bash
 iptables -t nat -A POSTROUTING -o vmbr0 -j MASQUERADE
+
+[Interface]
+Address = 10.0.0.1/24
+ListenPort = 51820
+PrivateKey = <REDACTED>
+PostUp = iptables -t nat -A POSTROUTING -o vmbr0 -j MASQUERADE
+PostDown = iptables -t nat -D POSTROUTING -o vmbr0 -j MASQUERADE
+
+[Peer]
+PublicKey = <REDACTED>
+AllowedIPs = 10.0.0.2/32
+
 2. Port Forwarding
 Forwarded UDP port 51820 to Proxmox server (192.168.1.88)
+
+
 3. Client Configuration
 Each client configured with:
 Unique key pair
 Unique VPN IP (e.g., 10.0.0.2, 10.0.0.3)
 Persistent keepalive
+
 4. Multi-Client Setup
 Added multiple peers:
 [Peer]
 PublicKey = CLIENT_PUBLIC_KEY
 AllowedIPs = 10.0.0.X/32
+> 🔒 **Security Note:** Each peer is assigned a `/32` AllowedIPs address, 
+> scoping them strictly to their own VPN IP. This prevents clients from 
+> seeing or spoofing each other's tunnel traffic — an important isolation 
+> practice in multi-client VPN deployments.
+
 5. Internal Network Access
 Enabled routing to 192.168.1.0/24
 Verified connectivity to Kali VM via:
@@ -129,8 +149,13 @@ tcpdump -i vmbr0 udp port 51820
 ## Impact
 This project demonstrates the ability to design, deploy, and troubleshoot secure network infrastructure in a real-world lab environment.
 
+
 Future Improvements
-Add firewall rules for segmentation
-Integrate with SIEM (Elastic Stack)
-Implement key rotation policy
-Add intrusion detection monitoring
+## 🚀 Roadmap
+
+| Priority | Improvement | Purpose |
+|----------|-------------|---------|
+| High | Firewall rules (iptables/nftables) | Segment VPN clients from internal network |
+| High | Intrusion detection (Suricata/Snort) | Alert on suspicious tunnel traffic |
+| Medium | SIEM integration (Elastic Stack) | Centralized log analysis and dashboards |
+| Medium | Automated key rotation | Enforce key expiry policy |
