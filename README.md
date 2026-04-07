@@ -62,7 +62,7 @@ This architecture ensures that external clients securely access internal resourc
 - Configured `wg0.conf`
 - Enabled IP forwarding
 - Configured NAT:
-```bash
+bash
 iptables -t nat -A POSTROUTING -o vmbr0 -j MASQUERADE
 2. Port Forwarding
 Forwarded UDP port 51820 to Proxmox server (192.168.1.88)
