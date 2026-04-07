@@ -1,7 +1,9 @@
 # 🔐 WireGuard VPN Home Lab (Proxmox)
 
 ## 📌 Overview
-Deployed a secure WireGuard VPN on a Proxmox server to enable remote access to a home lab environment. The setup supports multiple clients and allows secure connectivity to internal virtual machines, including a Kali Linux system.
+Designed and deployed a secure WireGuard VPN on a Proxmox server to enable encrypted remote access to a home lab environment. The solution supports multiple clients and allows secure connectivity to internal virtual machines, including a Kali Linux system.
+
+This project simulates real-world enterprise remote access scenarios and demonstrates hands-on experience in networking, security, and troubleshooting.
 
 ---
 
@@ -29,7 +31,8 @@ Proxmox Server (WireGuard VPN - wg0)
 Internal Network (192.168.1.0/24)
         │
         └── Kali Linux VM (192.168.1.161)
-
+        
+This architecture ensures that external clients securely access internal resources without exposing services directly to the public internet.
 ---
 
 ## ⚙️ Technologies Used
@@ -79,6 +82,8 @@ Verified connectivity to Kali VM via:
 ping 192.168.1.161
 ssh francisca@192.168.1.161
 Troubleshooting (Real-World Debugging)
+This project involved extensive troubleshooting to resolve real-world networking issues, including handshake failures, key mismatches, and routing problems.
+
 ❌ Issue: No handshake
 Cause: Key mismatch
 Fix: Regenerated and properly mapped keys
@@ -115,6 +120,8 @@ tcpdump -i vmbr0 udp port 51820
 ### 📊 Traffic Monitoring (vnStat)
 <img width="1263" height="851" alt="vnstat" src="https://github.com/user-attachments/assets/ea060c96-2d70-446e-9236-0ec20d43c7b0" />
 
+## 🎯 Impact
+This project demonstrates the ability to design, deploy, and troubleshoot secure network infrastructure in a real-world lab environment.
 
 🚀 Future Improvements
 Add firewall rules for segmentation
