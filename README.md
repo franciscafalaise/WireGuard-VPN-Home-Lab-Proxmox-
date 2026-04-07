@@ -109,16 +109,20 @@ tcpdump -i vmbr0 udp port 51820
 ## 📸 Screenshots
 
 ### 🔐 VPN Handshake
-<img width="364" height="88" alt="handshake" src="https://github.com/user-attachments/assets/8df6f0b2-eee2-4c21-b9cf-a9e71d45af40" />
+<img width="364" height="88" alt="handshake" src="https://github.com/user-attachments/assets/5300f48d-5066-4df8-abb8-230d203ca53a" />
 
 ### 🐉 SSH into Kali VM
-<img width="601" height="386" alt="kali-ssh" src="https://github.com/user-attachments/assets/a919cc3d-94f4-4af8-b01f-2475222549df" />
+<img width="601" height="386" alt="kali-ssh" src="https://github.com/user-attachments/assets/ada6aa17-bbd7-41ec-a7e1-ebda9dec2c7a" />
 
 ### 📡 Internal Network Connectivity
-<img width="601" height="386" alt="ping Kali" src="https://github.com/user-attachments/assets/e041bd4e-694e-4eff-8e5c-5163383e125b" />
+
+<img width="601" height="386" alt="ping Kali internal network connectivity" src="https://github.com/user-attachments/assets/1af0c809-c27b-483d-92f5-d74e5e0b4d91" />
 
 ### 📊 Traffic Monitoring (vnStat)
-<img width="1263" height="851" alt="vnstat" src="https://github.com/user-attachments/assets/ea060c96-2d70-446e-9236-0ec20d43c7b0" />
+<img width="1263" height="851" alt="vnstat" src="https://github.com/user-attachments/assets/26323566-7aeb-4411-81e3-3723e01decd8" />
+
+
+
 
 ## 🎯 Impact
 This project demonstrates the ability to design, deploy, and troubleshoot secure network infrastructure in a real-world lab environment.
