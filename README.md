@@ -1,4 +1,4 @@
-# 🔐 WireGuard VPN Home Lab (Proxmox)
+#  WireGuard VPN Home Lab (Proxmox)
 
 ## Overview
 Designed and deployed a secure WireGuard VPN on a Proxmox server to enable encrypted remote access to a home lab environment. The solution supports multiple clients and allows secure connectivity to internal virtual machines, including a Kali Linux system.
